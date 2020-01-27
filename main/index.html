@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>WebLive-Making Business Live</title>
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<!-- Add custom CSS here -->
+<link href="../css/modern-business.css" rel="stylesheet">
+
+			<link rel="stylesheet" href="../css/style.css" />
+			
+
+
+
+<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+.thumbnail {
+	position:relative;
+	overflow:hidden;
+	background-color:transparent;
+	margin-bottom:0;
+}
+
+.h1-banner{
+line-height: 1em;
+		margin: 0 0 1em 0;
+}
+.caption {
+ transition: all .2s ease;
+	position:absolute;
+	top:-100%;
+	right:0;
+	/*background:rgba(66, 139, 202, 0.75);*/
+	background:rgba(67, 67, 67, 0.75);
+	width:100%;
+	height:100%;
+	padding:2%;
+	text-align:center;
+	color:#fff !important;
+	z-index:2;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.thumbnail:hover .caption {
+	top:0%;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container1:hover .image {
+  opacity: 0.3;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: rgba(0,59,131,1);;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 360px;
+  height: 230px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #e1e1e1;
+  color: black;
+}
+
+.flip-box-back {
+  background: linear-gradient(135deg, rgba(0,59,131,1) 0%,rgba(125,185,232,1) 100%,rgba(15,156,229,1) 100%);;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+     <a class="navbar-brand text-left col-xs-9 col-lg-12" href="index.html">
+<img class="img-responsive" src="../images/logo.jpg" border="0" alt="WEB- Live" title="WEB- Live" style="width:100% !important; height:auto;"/>
+
+      </a>
+       </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="about.html">About</a> </li>
+        <!-- <li><a href="services.html">Services</a> </li> -->
+     <li><a href="themes.html">Themes</a> </li>
+		<li><a href="cost.html">Pricing</a> </li>
+   
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="fill" style="background-image:url(../images/imagesky.jpg);"></div>
+      <div class="carousel-caption">
+        <h1 class="h1-banner">Information is the seed for an idea, & grows when it's watered!</h1>
+      </div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url(../images/banner2.jpg)"></div>
+      <div class="carousel-caption">
+        <h1 class="h1-banner">Talent wins games, but teamwork and intelligence wins championships</h1>
+      </div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url(../images/banner3.jpg)"></div>
+      <div class="carousel-caption">
+        <h1 class="h1-banner">Teamwork divides the task and multiplies the Success</h1>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="icon-prev"></span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="icon-next"></span> </a> </div>
+<div class="section" style="display:none">
+  <div class="container">
+    <div class="row">
+	 <div class="col-lg-12 text-center">
+        <h2 >This is all we need to begin building your site:</h2>
+        <hr>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h3 class="text-center"><i class="fa fa-check-circle"></i> Select a theme</h3>
+        <p class="text-center">Choose from 100+ beautiful custom themes designed for your business type</p>
+        
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h3 class="text-center"><i class="fa fa-pencil"></i> Choose Your Subscription</h3>
+		 <p class="text-center">Select a plan to get started and focus on your business while we manage your website</p>
+      
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h3 class="text-center"><i class="fa fa-folder-open"></i> Add Your Features</h3>
+        <p  class="text-center" >Features add function to form and convenience, making your website friendly for your user</p>
+        
+      </div>
+	 
+    </div>
+	<br>
+	  <div class="row">
+	  </br>
+	 
+	
+	</div>
+	
+	<div >
+ 
+ 
+</div>
+    <!-- /.row -->
+  </div>
+ 
+  <!-- /.container -->
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+	<div class="col-lg-12 text-center">
+        <h2>This is all we need to begin building your site:</h2>
+        <hr>
+      </div>
+	<div class="col-lg-4 col-md-4">
+	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3 class="text-center-flip"><i class="fa fa-check-circle"></i> Select a theme</h3>
+    </div>
+    <div class="flip-box-back">
+    <p class="text-center-flip">Choose from 100+ beautiful custom themes designed for your business type</p>
+    </div>
+  </div>
+</div>
+	</div>
+	<div class="col-lg-4 col-md-4">
+	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+       <h3 class="text-center-flip"><i class="fa fa-pencil"></i> Choose Your Subscription</h3>
+    </div>
+    <div class="flip-box-back">
+   <p class="text-center-flip">Select a plan to get started and focus on your business while we manage your website</p> </div>
+  </div>
+</div>
+	</div>
+	<div class="col-lg-4 col-md-4">
+	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+     <h3 class="text-center-flip"><i class="fa fa-folder-open"></i> Add Your Features</h3>
+    </div>
+    <div class="flip-box-back">
+    <p  class="text-center-flip" >Features add function to form and convenience, making your website friendly for your user</p>
+  </div>
+</div>
+	</div>
+	
+	
+	</div>
+	</div>
+	 <div class="row">
+	
+	 
+	  </br>
+	  
+
+ <div class="dropdown">
+    <button style="color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;margin:auto;display:block" type="button" data-toggle="dropdown">Select Your Business
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Beauty & Wellness</a></li>
+       <li><a href="#">Fitness</a></li>
+	   <li><a href="foodnbev.html">Nutrition</a></li>
+      
+	  
+    </ul>
+  </div>
+  
+  
+
+	</div>
+	</div>
+
+
+
+
+
+
+<br>
+
+<!-- /.section-colored -->
+<div class="section-colored" style="display:block">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>How can a Web-Live website help your business?</h2>
+        <hr>
+      </div>
+	
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	  <div class="container1">
+	  <a href="portfolio-item.html"> <img src="../images/Mobile-App.png" class="img-responsive img-home-portfolio image" style="width:100%"> </a>
+      <div class="middle">
+    <div class="text">Mobile-APP</div>
+  </div>   
+  </div>
+	  </div>
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	   <div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image" style="width:100%" src="../images/google-analytics.jpg"> </a> 
+	   <div class="middle">
+    <div class="text">Google-Analytics</div>
+  </div>  
+	  </div>
+	  </div>
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	   <div class="container1"><a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image" style="width:100%" src="../images/SEO.jpg"> </a> 
+	    <div class="middle">
+    <div class="text">SEO</div>
+  </div>  </div>
+  </div>
+  
+  </br>
+  
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	   <div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image "  style="width:100%"  src="../images/socialmarketing.jpg"> </a> <div class="middle">
+    <div class="text">Social Marketing</div>
+  </div> </div>
+  </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+<div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image"  style="width:100%"  src="../images/cybersecurity.jpg"> </a><div class="middle">
+	   <div class="text">Security</div>
+  </div> </div>
+	 </div>
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	  <div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image"  style="width:100%"  src="../images/cloud-storage.jpg"> </a> <div class="middle">
+	  <div class="text">Cloud Storage</div>
+	  </div>
+   </div>
+	
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+</div>
+</div>
+<!-- /.section -->
+<div class="section-colored" style="display:none;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h2>Modern Business Features Include:</h2>
+        <ul>
+          <li>Bootstrap 3 Framework</li>
+          <li>Mobile Responsive Design</li>
+          <li>Predefined File Paths</li>
+          <li>Working PHP Contact Page</li>
+          <li>Minimal Custom CSS Styles</li>
+          <li>Unstyled: Add Your Own Style and Content!</li>
+          <li>Font-Awesome fonts come pre-installed!</li>
+          <li>100% <strong>Free</strong> to Use</li>
+          <li>Open Source: Use for any project, private or commercial!</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6"> <img class="img-responsive" src="http://placehold.it/700x450/ffffff/cccccc"> </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.section-colored -->
+<div class="section" style="display:none">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6"> <img class="img-responsive"  src="../images/home-profile-img.jpg" height="339" /> </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <p>Founded on the principle of providing quality, reliable and result oriented service, we have years of proven experience working on cutting edge of technologies. We depend on the highly qualified and trained software engineers to carry out your work with utmost attention and responsibility. <br />
+          <br />
+          We know that by leveraging our expertise, you place your trust and invest valuable time and energy in us and we work very hard to make sure that we exceed your expectations for mutually beneficial long term relationship. We follow internationally established development practices to minimize the inherent risk to deliver consistent results, one client at a time. <br />
+          <br />
+          No project is too small or large for us. Based on our highly optimized practices, we can handle any size project with substantial cost reduction while satisfying your utmost demands.</p>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h4>Guiding principles</h4>
+        <ul>
+          <li>We will make it possible to leverage the advantages of outsourcing for all SMB (Small-to-Midsize Business) customers.</li>
+          <li>We will always have customer's interest at the forefront of all our activities. </li>
+          <li>We will provide a merit driven working environment for world class talent to grow to their full potential.</li>
+          <li>We will stay at the leading edge of the technology benefiting our customers with the latest solutions.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<div class="section text-center" style="display:none">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Your Satisfaction is Our Guarantee</h3>
+        <p>Working with Infinite Computing Systems is 100% risk-free.If you are not completely satisfied during the first 30 days, and we cannot revise the site to your satisfaction, let us know! We’ll issue a complete refund of your purchase price. See our Refund Policy for additional information.</p>
+       
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.section -->
+<div class="section text-center">
+<div class="container" style="display:block">
+ <div class="row">
+    <div class="col-lg-12">
+      <h3>Your Satisfaction is Our Guarantee</h3>
+      <p>Working with Web-Live is 100% risk-free.If you are not completely satisfied during the first 30 days, and we cannot revise the site to your satisfaction, let us know! We’ll issue a complete refund of your purchase price. See our Refund Policy for additional information.
+       </p>
+    </div>
+	</div>
+	</br>
+    <div >  <button type="button" style="color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;margin:auto;display:block">Contact Us</button>  </div>
+  </div>
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
+<div class="navbar-default-f">
+  
+  <footer>   
+    <hr>
+    <div class="row">
+      <div class="col-lg-12">
+        <strong style="color: #f5f5f5;
+		font-weight: 400;">&copy; 2019 Web Live Pvt. Ltd. All rights reserved.</strong>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- /.container -->
+<!-- JavaScript -->
+<script src="../js/jquery-1.10.2.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/modern-business.js"></script>
+</body>
+</html>

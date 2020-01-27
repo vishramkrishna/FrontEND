@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>WebLive-Making Business Live</title>
+<!-- Bootstrap core CSS -->
+<!-- <script src="js/jquery.min.js"></script> -->
+		<!-- <script src="js/jquery.scrolly.min.js"></script> -->
+		<!-- <script src="js/skel.min.js"></script> -->
+		<!-- <script src="js/init.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>			
+<link href="../css/bootstrap.css" rel="stylesheet">
+<!-- Add custom CSS here -->
+<link href="../css/modern-business.css" rel="stylesheet">
+<link href="../css/stylefor3d.css" rel="stylesheet">
+
+<!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="css/skel.css" /> -->
+	<!-- <link rel="stylesheet" href="css/style.css" />  -->
+			<!-- <link rel="stylesheet" href="css/style-xlarge.css" /> -->
+<!-- <script src="js/slideshow.js"></script> -->
+
+<style>
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+a{
+color: #666;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 16pt;
+		font-weight: 300;
+		line-height: 1.65em;
+		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		
+		color: inherit;
+		text-decoration: none;
+}
+.thumbnail {
+	position:relative;
+	overflow:hidden;
+	background-color:transparent;
+	margin-bottom:0;
+}
+.caption {
+ transition: all .2s ease;
+	position:absolute;
+	top:-100%;
+	right:0;
+	/*background:rgba(66, 139, 202, 0.75);*/
+	background:rgba(67, 67, 67, 0.75);
+	width:100%;
+	height:100%;
+	padding:2%;
+	text-align:center;
+	color:#fff !important;
+	z-index:2;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.thumbnail:hover .caption {
+	top:0%;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container1:hover .image {
+  opacity: 0.3;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: rgba(0,59,131,1);;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+<!--for iphone-->
+.dm-width {
+   width: 500px;
+   margin: 0 auto;
+}
+
+.iphone-mockup {
+   position: relative;
+   z-index: 5;
+}
+
+.dm-device {
+    position: relative;
+    width: 100%;
+    padding-bottom:150%;
+   
+}
+
+.device {
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+    
+    background-repeat: no-repeat;
+          background-image: url(https://res.cloudinary.com/di5yipnns/image/upload/v1482236588/apple-iphone_aivldo.png);
+  background-size: cover;
+    background-position: center center;
+}
+
+.screen {
+   overflow: hidden;
+    position: absolute;
+    top: 18.1%;
+    bottom: 20.6%;
+    left: 12.49%;
+    right: 17.4%;
+    background-color: #E91E63;
+}
+
+.slider {
+  height: 100%;
+}
+.slider div {
+  height: 100%;
+}
+
+.slider__item {
+    font-size: 100px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__item--1 {
+   background-color: #E91E63;
+}
+.slider__item--2 {
+   background-color: #2196F3;
+}
+.slider__item--3 {
+   background-color: #4CAF50;
+}
+
+.slider__item--4 {
+  background-color: #FFC107;
+}
+
+.zoom {
+ 
+  
+  transition: transform .2s; /* Animation */
+  
+
+}
+.zoom:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+  
+   $(document).ready(function(){
+   
+    $("#tbl_reserv").on("click",function(){
+	
+	$("#restaurant").show();
+	$("#marketing").hide();
+	$("#reward").hide();
+	$("#event").hide();
+	
+	})
+	 $("#email_marketing").on("click",function(){
+	 $("#marketing").show();
+	$("#restaurant").hide();
+	$("#reward").hide();
+		$("#event").hide();
+	})
+	 $("#event_ck").on("click",function(){
+	 $("#event").show();
+	$("#restaurant").hide();
+	$("#marketing").hide();
+	$("#reward").hide();
+	
+	})
+	 $("#loyalty_reward").on("click",function(){
+	$("#reward").show();
+	$("#restaurant").hide();
+	$("#marketing").hide();
+	$("#event").hide();
+	})
+   
+   })
+  </script>
+  
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+      <a class="navbar-brand text-left col-xs-9 col-lg-12" href="index.html">
+	<img class="img-responsive" src="../images/logo.jpg" border="0" alt="WEB- Live" title="WEB- Live" style="width:100% !important; height:auto;"/>
+	 </a>
+       </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../main/about.html" style="">About</a> </li>
+        <!-- <li><a href="services.html">Services</a> </li> -->
+     
+         <li><a href="../main/themes.html">Themes</a> </li>
+		<li><a href="../main/cost.html">Pricing</a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+  <div id="myCarousel" class="carousel slide">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="fill" style="background-image:url(../images/imgfoodbev.jpg);"></div>
+      
+    </div>
+   </div>
+   </div>
+
+
+<div class="container" style="display:block">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header-food ">Everything You need to Launch Your Business Online</h1>
+      <ol class="breadcrumb" style="display:none">
+        <li><a href="main/index.html">Home</a> </li>
+        <li class="active">Food/Beverages</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8"><div class="zoom"> 
+	<img id="restaurant" class="img-responsive" src="../images/tblresevation.jpg" style="display:block"> 
+	<img id="marketing" class="img-responsive" src="../images/emailmarketing.jpg" style="display:none"> 
+	<img id="event" class="img-responsive" src="../images/event_hotel.jpg" style="display:none">
+	<img id="reward" class="img-responsive" src="../images/rew.png" style="display:none"> 
+	</div></div>
+	
+    <div class="col-md-4">
+	<div class="page-sub-header">
+      <h3 id="tbl_reserv">Table Reservation</h3>
+      <p>Lorem ipsum dolor sitnec metus.</p>
+      <h3 id="email_marketing">Email Marketing</h3>
+	  <p>Lorem ipsum dolor sitnec metus.</p>
+	 <h3 id="event_ck">Events</h3>
+      <p>Lorem ipsum dolor sitnec metus.</p>
+      <h3 id="loyalty_reward">Loyalty Rewards</h3>
+	  <p>Lorem ipsum dolor sitnec metus.</p>
+	  
+     
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+ 
+  <div class="container" style="display:block">
+  <div class="row">
+     <div class="col-lg-12">
+          <h1 class="page-header-food-sub">But Wait there's More?</h1>
+        <hr>
+      </div>
+	
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	  <div class="container1">
+	  <a href="portfolio-item.html"> <img src="../images/Mobile-App.png" class="img-responsive img-home-portfolio image" style="width:100%"> </a>
+      <div class="middle">
+    <div class="text">Mobile-APP</div>
+  </div>   
+  </div>
+	  </div>
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	   <div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image" style="width:100%" src="../images/google-analytics.jpg"> </a> 
+	   <div class="middle">
+    <div class="text">Google-Analytics</div>
+  </div>  
+	  </div>
+	  </div>
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	   <div class="container1"><a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image" style="width:100%" src="../images/SEO.jpg"> </a> 
+	    <div class="middle">
+    <div class="text">SEO</div>
+  </div>  </div>
+  </div>
+  
+  </br>
+  
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	   <div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image "  style="width:100%"  src="../images/socialmarketing.jpg"> </a> <div class="middle">
+    <div class="text">Social Marketing</div>
+  </div> </div>
+  </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+<div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image"  style="width:100%"  src="../images/cybersecurity.jpg"> </a><div class="middle">
+	   <div class="text">Security</div>
+  </div> </div>
+	 </div>
+      <div class="col-lg-4 col-md-4 col-sm-6"> 
+	  <div class="container1">
+	  <a href="portfolio-item.html"> <img class="img-responsive img-home-portfolio image"  style="width:100%"  src="../images/cloud-storage.jpg"> </a> <div class="middle">
+	  <div class="text">Cloud Storage</div>
+	  </div>
+   </div>
+	
+    <!-- /.row -->
+  </div>
+  	  <a href="cost.html">
+  <button style="color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;margin:auto;display:block" >View Pricing 
+   </button>
+   </a>
+  <!-- /.container -->
+</div>
+</div>
+  
+  <div class="container" style="display:block">
+  <div class="row" style="display:none">
+    <div class="col-lg-12">
+      <h1 class="col-lg-12 text-center">Featured Theme</h1>
+	  
+    </div>
+    <div class="col-sm-3 col-xs-6"> <a href="#"> <img class="img-responsive img-customer" src="http://placehold.it/500x300"> </a> </div>
+    <div class="col-sm-3 col-xs-6"> <a href="#"> <img class="img-responsive img-customer" src="http://placehold.it/500x300"> </a> </div>
+    <div class="col-sm-3 col-xs-6"> <a href="#"> <img class="img-responsive img-customer" src="http://placehold.it/500x300"> </a> </div>
+    <div class="col-sm-3 col-xs-6"> <a href="#"> <img class="img-responsive img-customer" src="http://placehold.it/500x300"> </a> </div>
+	  <a href="themes.html">
+	  <button style="color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;margin:auto;display:block" >Themes
+   </button>
+   </a>
+   </div>
+   <div class="row" >
+    <div class="col-lg-12">
+          <h1 class="page-header-food-sub">Featured Themes</h1>
+        <hr>
+      </div>
+   <div class="container">
+        <div class="button1" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt=""></div>
+        <div class="cards-wrapper">
+            <ul class="cards__container">
+                <li class="box"> <div class="zoom"><img class="img-responsive img-customer" src="../images/resp1.jpg" border="3"></div></li>
+                <li class="box"><div class="zoom"><img class="img-responsive img-customer" src="../images/resp2.jpg" border="3"></div></li>
+                <li class="box"><div class="zoom"><img class="img-responsive img-customer" src="../images/resp3.jpg" border="3"></div></li>
+                <li class="box"><div class="zoom"><img class="img-responsive img-customer" src="../images/resp4.jpg" border="3"></div></li>
+                <li class="box"><div class="zoom"><img class="img-responsive img-customer" src="../images/resp5.jpg" border="3"></div></li>
+                <li class="box box--hide"><div class="zoom"><img class="img-responsive img-customer" src="../images/resp6.png" border="1"></div></li>
+               
+            </ul>
+
+        </div>
+        <div class="button1" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt=""></div>
+    </div>
+	  <a href="themes.html">
+	  <button style="color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;margin:auto;display:block" >Themes
+   </button>
+   </a>
+   </div>
+   
+   
+   </div>
+  
+  <div class="text-center">
+<div class="container" style="display:block">
+   <div class="row">
+    <div class="col-lg-12">
+      <h3>Your Satisfaction is Our Guarantee</h3>
+	  <hr>
+      <p>Working with Web-Live is 100% risk-free.If you are not completely satisfied during the first 30 days, and we cannot revise the site to your satisfaction, let us know! We’ll issue a complete refund of your purchase price. See our Refund Policy for additional information.
+       </p>
+    </div>
+	</div>
+	</div>
+	</div>
+
+</div>
+<!-- /.container -->
+<div class="navbar-default-f">
+  <hr>
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; Company 2013</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- /.container -->
+<!-- JavaScript -->
+<script src="../js/jquery-1.10.2.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/modern-business.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
